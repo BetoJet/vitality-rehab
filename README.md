@@ -9,12 +9,6 @@ A responsive and fully customized website built for **Vitality Rehab**, a profes
 
 ---
 
-## 📸 Preview
-
-![Homepage Screenshot](https://vitalityrehab.com.mx/wp-content/uploads/2023/09/Portada-Vitality.jpg)
-
----
-
 ## 🚀 Features
 
 - 🧠 Full custom design using **HTML**, **CSS**, and **JavaScript**
