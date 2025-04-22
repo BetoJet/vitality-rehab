@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Vitality Rehab - Acceso Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <style>
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: whitesmoke ;
+            box-shadow: 0 1px 25px #00AEC9;
+        }
+        
+        .auth-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+        }
+        
+        .auth-header {
+            padding: 30px;
+            text-align: center;
+            color: white;
+            background-color: #00AEC9;
+            box-shadow: 0 1px 25px #00AEC9;
+        }
+        
+        .auth-header img {
+            height: 60px;
+            margin-bottom: 15px;
+            border-radius: 15%;
+        }
+        
+        
+        .auth-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .auth-header p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+        }
+        
+        .auth-form {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #212529;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: #00AEC9;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0088c5;
+        }
+        
+        .auth-switch {
+            text-align: center;
+            margin-top: 20px;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+        
+        .auth-switch p {
+            margin: 20px;
+        }
+
+        .auth-switch a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+    
+        }
+        
+        .auth-switch a:hover {
+            text-decoration: underline;
+        }
+        
+   
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+    
+                    <img src="img/logo.png" alt="Vitality Rehab Logo">
+                <h2>Acceso Profesional</h2>
+                <p>Sistema de gestión clínica</p>
+            </div>
+            
+            <div id="loginFormContainer">
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Correo Electrónico</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Contraseña</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Ingresar</button>
+                </form>
+                <p class="auth-switch">¿No tienes una cuenta? <a href="#" id="showRegister">Solicitar acceso</a></p>
+            </div>
+
+            <div id="registerFormContainer" style="display: none;">
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">Nombre Completo</label>
+                        <input type="text" id="registerName" name="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" id="registerEmail" name="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" id="registerPassword" name="registerPassword" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Registrarse</button>
+                </form>
+                <p class="auth-switch">¿Ya tienes una cuenta? <a href="#" id="showLogin">Iniciar sesión</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js?v=1.1"></script>
+    <script>
+        document.getElementById('showRegister')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('loginFormContainer').style.display = 'none';
+            document.getElementById('registerFormContainer').style.display = 'block';
+        });
+        
+        document.getElementById('showLogin')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('registerFormContainer').style.display = 'none';
+            document.getElementById('loginFormContainer').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
